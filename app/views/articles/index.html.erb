@@ -34,4 +34,11 @@
       </div>
     <% end %>
   <% end %>
+
+  <%# 下記がプラスボタン（NEW画面への遷移ボタン）の設定 %>
+  <%= link_to new_article_path do %>
+    <div class="float_btn">
+      <i class="fa fa-plus"></i>
+    </div>
+  <% end %>
 </div>
