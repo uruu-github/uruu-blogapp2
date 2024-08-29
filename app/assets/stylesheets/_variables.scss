@@ -1,6 +1,24 @@
-$primary-color: #8AC542;
-$base-bg-color: rgb(241, 245, 247);
+@import 'variables';
 
-$font-lg: 22px;
+$avatar-size: 40px;
+$header-padding-y: 16px;
 
-$text-base-color: #616161;
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $primary-color;
+  padding: $header-padding-y 16px;
+  font-weight: bold;
+
+  &_pageTitle {
+    color: white;
+    line-height: $avatar-size;
+    font-size: $font-lg;
+  }
+
+  &_avatar {
+    width: $avatar-size;
+    height: $avatar-size;
+    border-radius: 100%;
+  }
+}
