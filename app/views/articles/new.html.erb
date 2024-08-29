@@ -5,7 +5,7 @@
     <% end %>
   </ul>
 
-  <%= form_with(model: @article, url: articles_path, method: 'post', local: true) do |f| %>
+  <%= form_with(model: @article, url: articles_path, method: 'post', local: true, data: { turbo: false }) do |f| %>
     <div>
       <%= f.label :title, 'タイトル' %>
     </div>
