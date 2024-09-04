@@ -37,6 +37,7 @@ gem "bootsnap", require: false
 gem 'sassc-rails'
 
 gem 'faker'
+gem 'hamlit'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -47,6 +48,8 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -55,6 +58,7 @@ group :development do
 
   # Highlight the fine-grained location where an error occurred [https://github.com/ruby/error_highlight]
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
+  gem 'erb2haml'
 end
 
 group :test do
