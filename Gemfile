@@ -37,6 +37,8 @@ gem 'bootsnap', require: false
 gem 'sassc-rails'
 
 gem 'annotate'
+gem 'better_errors'
+gem 'binding_of_caller'
 gem 'faker'
 gem 'hamlit'
 gem 'rubocop'
