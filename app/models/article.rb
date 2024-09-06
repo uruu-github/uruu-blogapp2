@@ -10,7 +10,10 @@
 #
 class Article < ApplicationRecord
   validates :title, presence: true
+  validates :title, length: { minimum: 2, maximum: 100 } #2文字以上~100文字以下
+
   validates :content, presence: true
+  validates :content, length: {minimum: 10} #10文字以上
 
   def display_created_at
     I18n.l(self.created_at, format: :default)
