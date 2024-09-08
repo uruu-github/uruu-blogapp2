@@ -26,12 +26,12 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    #set_article
+    #単なるArticleにしてしまうと、自分以外の記事を編集できてしまうので、ログインしているユーザーだけにする。
+    @article = current_user.articles.find(params[:id])
   end
 
   def update
-    #set_article
-    if @article.update(article_params)
+    if @article = current_user.articles.find(params[:id])
 	    redirect_to article_path(@article), notice: '更新できました'
 	  else
       flash.now[:error] = '更新できませんでした'
@@ -40,7 +40,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    article = Article.find(params[:id])
+    article = current_user.articles.find(params[:id])
     article.destroy!
     redirect_to root_path, notice: '削除に成功しました。'
   end
