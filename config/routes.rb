@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments, only: [:new, :create]
   end
+
+  #プロフィールはユーザーに対して複数ないので単数形でOK。
+  resource :profile, only: [:show, :edit, :update]
+
 end
