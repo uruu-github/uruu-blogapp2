@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
   #プロフィールはユーザーに対して複数ないので単数形でOK。
   resource :profile, only: [:show, :edit, :update]
+  resources :favorites, only: [:index]
 
 end
