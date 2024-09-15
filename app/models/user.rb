@@ -52,11 +52,11 @@ class User < ApplicationRecord
   end
 
   def avatar_image
-    if profile.avatar&.attached?
+    if profile&.avatar&.attached?
       profile.avatar
     else
-      'default_avatar.ping'
+      'default-avatar.png'
     end
   end
-  
+
 end
