@@ -37,6 +37,7 @@ gem 'bootsnap', require: false
 gem 'sassc-rails'
 
 gem 'annotate'
+gem 'aws-sdk-s3', require: false
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'faker'
@@ -53,8 +54,8 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   # gem "rubocop-rails-omakase", require: false
 
-  gem 'pry-byebug'
   gem 'dotenv-rails'
+  gem 'pry-byebug'
 end
 
 group :development do
