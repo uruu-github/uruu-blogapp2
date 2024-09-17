@@ -32,7 +32,8 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    if @article = current_user.articles.find(params[:id])
+    @article = current_user.articles.find(params[:id])
+    if @article.update(article_params)
 	    redirect_to article_path(@article), notice: '更新できました'
 	  else
       flash.now[:error] = '更新できませんでした'
