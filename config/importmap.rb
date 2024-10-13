@@ -4,3 +4,5 @@ pin "trix", to: "https://unpkg.com/trix@1.3.1/dist/trix.js"
 pin "@rails/actiontext", to: "actiontext.esm.js" # ActionTextをピン
 pin "@hotwired/turbo-rails", to: "@hotwired--turbo-rails.js" # Turbo Railsをピン
 pin "@hotwired/stimulus", to: "@hotwired--stimulus.js" # Stimulusをピン
+pin "trix"
+pin "@rails/actiontext", to: "actiontext.esm.js"
