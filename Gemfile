@@ -35,6 +35,8 @@ gem 'bootsnap', require: false
 gem "image_processing", require: false
 gem 'actiontext'
 gem 'trix'
+gem 'rack-cors', require: 'rack/cors'
+
 
 gem 'sassc-rails'
 
