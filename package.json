@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "@hotwired/turbo-rails": "^7.0.0",
     "@hotwired/stimulus": "^3.0.0",
-    "trix": "^2.0.0",
-    "@rails/actiontext": "^7.0.0"
+    "@hotwired/turbo-rails": "^7.0.0",
+    "@rails/actiontext": "^7.0.0",
+    "trix": "^2.1.6"
   }
 }
