@@ -75,7 +75,5 @@ end
 
 gem 'devise', '~> 4.9'
 
-gem "image_processing", "~> 1.2"
-
 # Gemfileに追加
 gem 'webpacker', '~> 5.0'
