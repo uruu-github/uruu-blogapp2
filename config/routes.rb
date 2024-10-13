@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   resource :profile, only: [:show, :edit, :update]
   resources :favorites, only: [:index]
 
+  resources :attachments, only: [:create]  # POSTリクエスト用のルートを追加
+
 end
