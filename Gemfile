@@ -32,7 +32,11 @@ gem 'tzinfo-data', platforms: %i[ windows jruby ]
 gem 'bootsnap', require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", require: false
+gem 'actiontext'
+gem 'trix'
+gem 'rack-cors', require: 'rack/cors'
+
 
 gem 'sassc-rails'
 
@@ -43,6 +47,10 @@ gem 'binding_of_caller'
 gem 'faker'
 gem 'hamlit'
 gem 'rubocop'
+gem 'devise', '~> 4.9'
+
+# Gemfileに追加
+# gem 'webpacker', '~> 5.0'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -72,5 +80,3 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
 end
-
-gem 'devise', '~> 4.9'
