@@ -1,10 +1,10 @@
 // Turboをインポート
-import "@hotwired/turbo-rails"; 
+import "@hotwired/turbo-rails";
 // Trixをimportmapを使用してインポート
-import "trix"; 
+import "trix";
 import "trix.css"; // TrixのCSSをimportmapからインポート
 // ActionTextをインポート
-import "@rails/actiontext"; 
+import "@rails/actiontext";
 
 // Trixエディタの初期化とファイルアップロード処理
 document.addEventListener("trix-attachment-add", function(event) {
