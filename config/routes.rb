@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     resource :like, only: [:create, :destroy]
   end
 
+  resources :accounts, only: [:show]
+
   #プロフィールはユーザーに対して複数ないので単数形でOK。
   resource :profile, only: [:show, :edit, :update]
   resources :favorites, only: [:index]
