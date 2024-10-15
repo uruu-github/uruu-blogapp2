@@ -48,6 +48,7 @@ gem 'faker'
 gem 'hamlit'
 gem 'rubocop'
 gem 'devise', '~> 4.9'
+gem 'active_decorator'
 
 # Gemfileに追加
 # gem 'webpacker', '~> 5.0'
