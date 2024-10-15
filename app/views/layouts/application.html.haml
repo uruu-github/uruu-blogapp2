@@ -2,14 +2,15 @@
 %html
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
     %title BlogApp
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
     %link{href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel: "stylesheet"}
+    = stylesheet_link_tag 'application', media: 'all'
     %link{href: "https://cdn.jsdelivr.net/npm/trix@2.1.6/dist/trix.min.css", rel: "stylesheet"}  <!-- TrixのCSSファイル -->
     = javascript_importmap_tags
+    = javascript_include_tag "turbo", type: "module"
     %script{src: "https://cdn.jsdelivr.net/npm/trix@2.1.6/dist/trix.umd.min.js"}  <!-- TrixのJavaScriptファイル -->
 
   %body
@@ -27,7 +28,7 @@
           .dropdown-content
             = link_to 'プロフィール', profile_path
             = link_to 'お気に入り', favorites_path
-            = link_to 'ログアウト', destroy_user_session_path, data: { turbo_method: :delete }
+            = link_to 'ログアウト', destroy_user_session_path, data: { turbo_method: :delete, turbo_confirm: '本当にログアウトしますか？' }
       - else
         = link_to 'ログイン', new_user_session_path, class: 'header_loginBtn'
 

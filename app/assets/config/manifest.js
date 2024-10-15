@@ -8,3 +8,5 @@
 // TrixのCSSとJavaScriptを追加
 //= link trix.css
 //= link trix.js
+//= link_tree ../../javascript .js
+//= link_tree ../../../vendor/javascript .js
